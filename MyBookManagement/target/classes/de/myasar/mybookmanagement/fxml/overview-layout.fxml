@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.myasar.mybookmanagement.gui.OverviewController">
+   <children>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" prefHeight="30.0" prefWidth="680.0" text="Book Management">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Button layoutX="10.0" layoutY="40.0" mnemonicParsing="false" onAction="#switchToDetailSceneForNewBook" prefHeight="30.0" prefWidth="60.0" text="ADD" />
+      <Button layoutX="660.0" layoutY="40.0" mnemonicParsing="false" onAction="#editBook" prefHeight="30.0" prefWidth="60.0" text="EDIT" />
+      <Button layoutX="730.0" layoutY="40.0" mnemonicParsing="false" onAction="#deleteBook" prefHeight="30.0" prefWidth="60.0" text="DELETE" />
+      <TableView fx:id="bookTableView" layoutX="10.0" layoutY="80.0" prefHeight="500.0" prefWidth="780.0">
+        <columns>
+          <TableColumn fx:id="col_id" prefWidth="40.0" text="Id" />
+          <TableColumn fx:id="col_genre" prefWidth="100.0" text="Genre" />
+            <TableColumn fx:id="col_title" prefWidth="300.0" text="Title" />
+            <TableColumn fx:id="col_year" minWidth="0.0" prefWidth="40.0" text="Year" />
+            <TableColumn fx:id="col_author" prefWidth="210.0" text="Author" />
+            <TableColumn fx:id="col_price" minWidth="0.0" prefWidth="50.0" text="Price" />
+            <TableColumn fx:id="col_count" prefWidth="40.0" text="Count" />
+        </columns>
+      </TableView>
+   </children>
+</Pane>
